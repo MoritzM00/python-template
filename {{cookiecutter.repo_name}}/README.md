@@ -9,10 +9,7 @@
 [pre-commit]: https://github.com/pre-commit/pre-commit
 [black]: https://github.com/psf/black
 
-This is a demo repository of the Light-weight Python Template.
-It contains a minimal set of files to get started with a new python project. It does not force you to use any data-science specific libraries, but provides a set of tools that are useful for most projects.
-
-It is intended to be used for Data Science and Machine Learning projects with small to medium sized modules.
+{{cookiecutter.short_description}}
 
 ## Quick Start
 
@@ -47,3 +44,7 @@ To view the documentation locally, run:
 ```bash
 make docs_view
 ```
+
+## Credits
+
+This project was generated with the [Light-weight Python Template](https://github.com/MoritzM00/python-template) by Moritz Mistol.
