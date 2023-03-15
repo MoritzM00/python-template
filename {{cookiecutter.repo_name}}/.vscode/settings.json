@@ -1,5 +1,0 @@
-{
-  "yaml.schemas": {
-    "https://json.schemastore.org/github-workflow.json": "file:///Users/moritzmistol/Programming/python-template/%7B%7Bcookiecutter.repo_name%7D%7D/.github/workflows/deploy.yaml"
-  }
-}
