@@ -11,9 +11,11 @@ Tired of overloaded python templates? This template is for you!
 
 ## Quick Start
 
-1. Install [cookiecutter](https://cookiecutter.readthedocs.io/en/stable/installation.html)
+1. Install [cookiecutter](https://cookiecutter.readthedocs.io/en/stable/installation.html), e.g. with
+   ```bash
+   pip install --user cookiecutter
+   ```
 2. Run the following command:
-
-```bash
-cookiecutter https://github.com/MoritzM00/python-template
-```
+   ```bash
+   cookiecutter https://github.com/MoritzM00/python-template
+   ```
