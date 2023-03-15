@@ -1,3 +1,4 @@
+#{% raw %}
 # Simple workflow for deploying static content to GitHub Pages
 name: Deploy Docs
 
@@ -56,3 +57,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
+#{% endraw %}
