@@ -15,14 +15,20 @@ Below you can find the quick start guide for development.
 ### Set up the environment
 
 1. Install [Poetry](https://python-poetry.org/docs/#installation)
-2. Authorize the Pre-Commit CI App by following the login link here: <https://pre-commit.ci/>
-   This will allow the CI to run the pre-commit hooks on your repository.
-3. Set up the environment:
+2. Set up the environment:
 
 ```bash
 make setup
 make activate
 ```
+
+### Additional first-time setup
+
+1. After setting up the environment, commit the `poetry.lock` file to your repository, so that the workflow on github can use it.
+2. Enable [Pre-Commit CI](https://pre-commit.ci/) for your repository.
+3. Enable **Github Pages** for your documentation.
+   To do that, go to the _Settings_ tab of your repository and scroll down to the _GitHub Pages_ section.
+   For the _Source_ option, select _GitHub Action_. Done!
 
 ### Install new packages
 
@@ -34,7 +40,7 @@ poetry add <package-name>
 
 ### Documentation
 
-The Documentation is automacially deployed to GitHub Pages.
+The Documentation is automatically deployed to GitHub Pages.
 
 To view the documentation locally, run:
 

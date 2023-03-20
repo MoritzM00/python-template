@@ -8,7 +8,7 @@ install:
 activate:
 	poetry shell
 
-setup: initialize_git install download_data
+setup: initialize_git install
 
 test:
 	poetry run pytest

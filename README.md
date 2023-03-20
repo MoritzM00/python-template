@@ -24,3 +24,29 @@ This [demo repository](https://github.com/MoritzM00/python-template-demo) shows 
    ```bash
    cookiecutter https://github.com/MoritzM00/python-template
    ```
+
+3. Follow the _Quick Start_ instructions in the README.md of your new project to setup the environment.
+   Shortcut:
+
+   ```bash
+   make setup
+   make activate
+   ```
+
+   Finally, commit the `poetry.lock` file to your repository.
+
+4. Push your local repository to Github with the Github CLI:
+   For this, run
+
+   ```bash
+   gh repo create
+   ```
+
+   to interactively create a new repository on Github.
+
+5. Enable [Pre-Commit CI](https://pre-commit.ci/) for your repository.
+6. Enable **Github Pages** for your documentation.
+   To do that, go to the _Settings_ tab of your repository and scroll down to the _Pages_ section.
+   For the _Source_ option, select _GitHub Action_.
+7. Optionally, add a License of your choice.
+8. Optionally, add workflow badges by going to the _Actions_ tab of your repository and clicking on the workflow you want to add a badge for. Then, click on the _badge_ button in the top right corner.
