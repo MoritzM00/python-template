@@ -1,7 +1,10 @@
 # Demo for the light-weight Python Template
 
-[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)][pre-commit]
-[![Black](https://img.shields.io/badge/code%20style-black-000000.svg)][black]
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white&style=for-the-badge)][pre-commit]
+[![Black](https://img.shields.io/static/v1?label=code%20style&message=black&color=black&style=for-the-badge)][black]
+![Tests](https://img.shields.io/github/actions/workflow/status/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}/test.yaml?style=for-the-badge&label=Tests)
+![Docs](https://img.shields.io/github/actions/workflow/status/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}/deploy.yaml?style=for-the-badge&label=Docs)
+![License](https://img.shields.io/github/license/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}?style=for-the-badge)
 
 [pre-commit]: https://github.com/pre-commit/pre-commit
 [black]: https://github.com/psf/black
@@ -36,6 +39,12 @@ To install new PyPI packages, run:
 
 ```bash
 poetry add <package-name>
+```
+
+To add dev-dependencies, run:
+
+```bash
+poetry add <package-name> --group dev
 ```
 
 ### Documentation

@@ -48,4 +48,3 @@ This [demo repository](https://github.com/MoritzM00/python-template-demo) shows 
 6. Enable **Github Pages** for your documentation.
    To do that, go to the _Settings_ tab of your repository and scroll down to the _Pages_ section.
    For the _Source_ option, select _GitHub Action_.
-7. Optionally, add workflow badges by going to the _Actions_ tab of your repository and clicking on the workflow you want to add a badge for. Then, click on the _badge_ button in the top right corner.
