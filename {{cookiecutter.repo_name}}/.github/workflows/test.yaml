@@ -3,13 +3,17 @@ on:
   push:
     branches-ignore:
       - main # Ignore main branch, deploy workflow will call it
-  workflow_call:
   pull_request:
+  workflow_call:
 
 jobs:
   test:
-    name: Run Tests
+    name: Run Tests on Python ${{ matrix.python-version }}
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.9", "3.10"]
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -20,7 +24,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
-          python-version: 3.9
+          python-version: ${{ matrix.python-version }}
           cache: "poetry"
 
       - name: Install packages
