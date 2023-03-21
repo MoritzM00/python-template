@@ -9,8 +9,11 @@ This [demo repository](https://github.com/MoritzM00/python-template-demo) shows 
 ## Features
 
 :white_check_mark: [Poetry](https://python-poetry.org/) for efficient dependency management
+
 :white_check_mark: [Pre-Commit](https://pre-commit.com/) for enforcing code quality
+
 :white_check_mark: CI/CD with [Pre-Commit CI](https://pre-commit.ci/) and GitHub Actions
+
 :white_check_mark: Light-weight Documentation with [pdoc](https://pdoc.dev/) with deployment to GitHub Pages
 
 ## Quick Start
