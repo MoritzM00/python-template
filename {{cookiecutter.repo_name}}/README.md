@@ -1,15 +1,13 @@
-# Demo for the light-weight Python Template
+# {{cookiecutter.short_description}}
 
-[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white&style=for-the-badge)][pre-commit]
-[![Black](https://img.shields.io/static/v1?label=code%20style&message=black&color=black&style=for-the-badge)][black]
-![Tests](https://img.shields.io/github/actions/workflow/status/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}/test.yaml?style=for-the-badge&label=Tests)
-![Docs](https://img.shields.io/github/actions/workflow/status/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}/deploy_docs.yaml?style=for-the-badge&label=Docs)
-![License](https://img.shields.io/github/license/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}?style=for-the-badge)
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white&style={{cookiecutter.badge_style}})][pre-commit]
+[![Black](https://img.shields.io/static/v1?label=code%20style&message=black&color=black&style={{cookiecutter.badge_style}})][black]
+![Tests](https://img.shields.io/github/actions/workflow/status/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}/test.yaml?style={{cookiecutter.badge_style}}&label=Tests)
+![Docs](https://img.shields.io/github/actions/workflow/status/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}/deploy_docs.yaml?style={{cookiecutter.badge_style}}&label=Docs)
+![License](https://img.shields.io/github/license/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}?style={{cookiecutter.badge_style}})
 
 [pre-commit]: https://github.com/pre-commit/pre-commit
 [black]: https://github.com/psf/black
-
-{{cookiecutter.short_description}}
 
 ## Quick Start
 
