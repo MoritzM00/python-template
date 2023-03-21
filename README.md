@@ -33,7 +33,7 @@ This [demo repository](https://github.com/MoritzM00/python-template-demo) shows 
 2. Run the following command:
 
    ```bash
-   cookiecutter https://github.com/MoritzM00/python-template
+   cookiecutter gh:MoritzM00/python-template
    ```
 
 ## Detailed Instructions for first-time setup
