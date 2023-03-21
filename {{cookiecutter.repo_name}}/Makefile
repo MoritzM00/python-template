@@ -2,6 +2,7 @@ initialize_git:
 	git init
 
 install:
+	poetry config virtualenvs.in-project true
 	poetry install
 	poetry run pre-commit install
 
