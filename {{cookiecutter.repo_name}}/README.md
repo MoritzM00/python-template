@@ -1,7 +1,6 @@
 # {{cookiecutter.short_description}}
 
-![Tests](https://img.shields.io/github/actions/workflow/status/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}/test.yaml?style={{cookiecutter.badge_style}}&label=Tests)
-![Docs](https://img.shields.io/github/actions/workflow/status/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}/deploy_docs.yaml?style={{cookiecutter.badge_style}}&label=Docs)
+![Tests](https://img.shields.io/github/actions/workflow/status/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}/test_deploy.yaml?style={{cookiecutter.badge_style}}&label=Test%20and%20Deploy)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white&style={{cookiecutter.badge_style}})][pre-commit]
 [![Black](https://img.shields.io/static/v1?label=code%20style&message=black&color=black&style={{cookiecutter.badge_style}})][black]
 ![License](https://img.shields.io/github/license/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}?style={{cookiecutter.badge_style}})

@@ -1,6 +1,5 @@
 #{% raw %}
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy Docs
+name: Test and Deploy Docs
 
 on:
   push:
