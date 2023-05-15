@@ -15,10 +15,10 @@ test:
 	poetry run pytest
 
 docs_view:
-	poetry run pdoc src --http localhost:8080
+	poetry run pdoc src --docformat numpy
 
 docs_save:
-	poetry run pdoc src -f -o docs
+	poetry run pdoc src -o docs --docformat numpy
 
 ## Delete all compiled Python files
 clean:

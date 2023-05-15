@@ -44,7 +44,7 @@ jobs:
         run: poetry install
 
       - name: Build docs
-        run: poetry run pdoc src --html -f -o docs
+        run: make docs_save
 
       - name: Move docs
         run: mv docs/src/* docs && rm -rf docs/src
