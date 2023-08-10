@@ -24,9 +24,7 @@ This version of the template uses Conda as the virtual environment, but Poetry i
 
 Note: `conda activate` is a pain to use in makefile, so run this command these commands in this order:
 
-Replace `<<env_name>>` with the name of your environment and `<<os>>` with the corresponding OS specific lock file, e.g. `linux-64` or `osx-arm64` or
-(recommended)
-You can set these as environment variables as well to avoid having to type them every time, e.g.:
+Set these two environment variables as well to avoid having to type them every time, e.g.:
 
 ```bash
 export env_name={{cookiecutter.environment_name}}
@@ -37,7 +35,7 @@ Then run:
 
 ```bash
 make create-env
-conda activate $env_name
+conda activate {{cookiecutter.environment_name}}
 make install
 ```
 
@@ -65,6 +63,19 @@ make update-env
 ### Additional first-time setup
 
 Follow these steps once to setup the repository for GitHub Pages and Pre-Commit CI.
+
+First of all, initialize git,
+
+```bash
+git init
+```
+
+and commit the repo
+
+```bash
+git add .
+git commit -m "Initial commit"
+```
 
 #### Creating the conda lock-files for the first time
 
