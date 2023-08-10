@@ -10,6 +10,8 @@ This [demo repository](https://github.com/MoritzM00/python-template-demo) shows 
 
 :white_check_mark: [Poetry](https://python-poetry.org/) for efficient dependency management
 
+**Note:** Need Conda as base environment for data Science and ML Projects? Switch to the `conda` Branch!
+
 :white_check_mark: [Pre-Commit](https://pre-commit.com/) for enforcing code quality
 
 :white_check_mark: CI/CD with [Pre-Commit CI](https://pre-commit.ci/) and GitHub Actions
@@ -35,6 +37,14 @@ This [demo repository](https://github.com/MoritzM00/python-template-demo) shows 
    ```bash
    cookiecutter gh:MoritzM00/python-template
    ```
+
+   or
+
+   ```bash
+   cookiecutter -c conda gh:MoritzM00/python-template
+   ```
+
+   to get the conda template.
 
 ## Detailed Instructions for first-time setup
 
