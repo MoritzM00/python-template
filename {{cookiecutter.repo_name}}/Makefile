@@ -1,24 +1,28 @@
 initialize_git:
 	git init
 
+create-env:
+	conda create --name $(env_name) --file conda-$(os).lock
+
+update-env:
+	@echo "Re-generate Conda lock file(s) based on environment.yml"
+	@conda-lock -k explicit --conda mamba
+	@echo "Update Conda packages based on re-generated lock file"
+	@mamba update --file conda-$(os).lock
+	@echo "Update Poetry packages and re-generate poetry.lock"
+	@poetry update
+
 install:
-	poetry config virtualenvs.in-project true
 	poetry install
-	poetry run pre-commit install
-
-activate:
-	poetry shell
-
-setup: initialize_git install
 
 test:
 	poetry run pytest
 
 docs_view:
-	poetry run pdoc src --docformat numpy
+	poetry run pdoc src --http localhost:8080
 
 docs_save:
-	poetry run pdoc src -o docs --docformat numpy
+	poetry run pdoc src -f -o docs
 
 ## Delete all compiled Python files
 clean:

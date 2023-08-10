@@ -7,5 +7,6 @@
   "short_description": "",
   "copyright_year": "{% now 'utc', '%Y' %}",
   "badge_style": ["flat", "flat-square", "for-the-badge", "plastic"],
-  "environment_name": "{{ cookiecutter.repo_name }}"
+  "environment_name": "{{ cookiecutter.repo_name }}",
+  "os_lockfile": ["linux-64", "osx-arm64"]
 }

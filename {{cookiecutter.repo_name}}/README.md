@@ -1,4 +1,4 @@
-# {{ cookiecutter.short_description }}
+# {{cookiecutter.short_description}}
 
 ![Tests](https://img.shields.io/github/actions/workflow/status/MoritzM00/python-template-demo/test.yaml?style=flat-square&label=Tests)
 ![Docs](https://img.shields.io/github/actions/workflow/status/MoritzM00/python-template-demo/deploy_docs.yaml?style=flat-square&label=Docs)
@@ -29,8 +29,8 @@ Replace `<<env_name>>` with the name of your environment and `<<os>>` with the c
 You can set these as environment variables as well to avoid having to type them every time, e.g.:
 
 ```bash
-export env_name=conda-env
-export os=osx-arm64
+export env_name=${{cookiecutter.environment_name}}
+export os=${{cookiecutter.os_lockfile}}
 ```
 
 Then run:
