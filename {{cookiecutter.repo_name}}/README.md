@@ -60,56 +60,6 @@ Make sure the environment is activated and run:
 make update-env
 ```
 
-### Additional first-time setup
-
-Follow these steps once to setup the repository for GitHub Pages and Pre-Commit CI.
-
-First of all, initialize git,
-
-```bash
-git init
-```
-
-and commit the repo
-
-```bash
-git add .
-git commit -m "Initial commit"
-```
-
-#### Creating the conda lock-files for the first time
-
-If you do not have mamba, conda-lock and poetry installled, use the following bootstrap environment to create the lock files:
-
-```bash
-conda create -p /tmp/bootstrap -c conda-forge mamba conda-lock poetry='1.*'
-conda activate /tmp/bootstrap
-```
-
-Then run
-
-```bash
-conda-lock -k explicit --conda mamba
-```
-
-and remove the bootstrap environment:
-
-```bash
-conda deactivate
-rm -rf /tmp/bootstrap
-```
-
-Finally, commit the lock files to your repository.
-From this point on, you can use the described workflow to create and update the lock files from above.
-
-#### Setting up GitHub Pages and Pre-Commit CI
-
-1. Make sure that all lockfiles are up to date and committed.
-2. Enable [Pre-Commit CI](https://pre-commit.ci/) for your repository.
-3. Enable **Github Pages** for your documentation.
-   To do that, go to the _Settings_ tab of your repository and scroll down to the _GitHub Pages_ section.
-   For the _Source_ option, select _GitHub Action_. Done!
-
 ### Install new packages
 
 To install new PyPI packages, run:

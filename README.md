@@ -10,6 +10,8 @@ This [demo repository](https://github.com/MoritzM00/python-template-demo) shows 
 
 :white_check_mark: [Poetry](https://python-poetry.org/) for efficient dependency management
 
+:white_check_mark: [Conda](https://docs.conda.io/en/latest/) for data-science and machine learning projects
+
 :white_check_mark: [Pre-Commit](https://pre-commit.com/) for enforcing code quality
 
 :white_check_mark: CI/CD with [Pre-Commit CI](https://pre-commit.ci/) and GitHub Actions
@@ -43,38 +45,60 @@ This [demo repository](https://github.com/MoritzM00/python-template-demo) shows 
 - Python >= 3.9
 - [Poetry](https://python-poetry.org/docs/#installation)
 
-The code is tested for python versions 3.9 and 3.10 on Linux and macOS.
+The code is tested for python versions 3.9 on Linux. Developed locally on MacOS.
 
-### Environment Setup and GitHub Linking
+### Setting up Git
 
-After you generated your project with the template (see above), you need to do the following steps:
+First of all, initialize git,
 
-1. Setup your environment by executing
+```bash
+git init
+```
 
-   ```bash
-   make setup
-   make activate
-   ```
+and commit the repo
 
-   and then create a commit (must include the `poetry.lock` file):
+```bash
+git add .
+git commit -m "Initial commit"
+```
 
-   ```bash
-   git add .
-   git commit -m "initial commit"
-   ```
+### Create the conda lock-files for the first time
 
-2. Push your local repository to Github with the Github CLI:
-   For this, run
+If you do not have mamba, conda-lock and poetry installled, use the following bootstrap environment to create the lock files:
 
-   ```bash
-   gh repo create
-   ```
+```bash
+conda create -p /tmp/bootstrap -c conda-forge mamba conda-lock poetry='1.*'
+conda activate /tmp/bootstrap
+```
 
-   to interactively create a new repository on Github.
+Then run
 
-### Set up third-party services
+```bash
+conda-lock -k explicit --conda mamba
+```
 
-1. Enable [Pre-Commit CI](https://pre-commit.ci/) for your repository.
-2. Enable **Github Pages** for your documentation.
-   To do that, go to the _Settings_ tab of your repository and scroll down to the _Pages_ section.
-   For the _Source_ option, select _GitHub Action_.
+and remove the bootstrap environment:
+
+```bash
+conda deactivate
+rm -rf /tmp/bootstrap
+```
+
+Finally, commit the lock files to your repository.
+From this point on, you can use the described workflow to create and update the lock files from above.
+
+### Push to GitHub
+
+For example with the `gh` CLI:
+
+```bash
+gh repo create
+```
+
+### Setting up GitHub Pages and Pre-Commit CI
+
+1. Make sure that all lockfiles are up to date and committed.
+2. Enable [Pre-Commit CI](https://pre-commit.ci/) for your repository.
+3. Enable **Github Pages** for your documentation.
+   To do that, go to the _Settings_ tab of your repository and scroll down to the _GitHub Pages_ section.
+   For the _Source_ option, select _GitHub Action_. Done!
