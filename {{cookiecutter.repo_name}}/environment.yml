@@ -1,4 +1,4 @@
-name: ${{cookiecutter.environment_name}}
+name: {{cookiecutter.environment_name}}
 channels:
   - pytorch
   - conda-forge
