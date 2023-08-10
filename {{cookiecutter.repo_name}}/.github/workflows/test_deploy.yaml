@@ -1,5 +1,6 @@
 #{% raw %}
-name: Test and Deploy Docs
+# Simple workflow for deploying static content to GitHub Pages
+name: Deploy Docs
 
 on:
   push:
@@ -17,6 +18,9 @@ concurrency:
   group: "pages"
   cancel-in-progress: true
 
+env:
+  ENV_NAME: conda-env
+
 jobs:
   test:
     uses: ./.github/workflows/test.yaml
@@ -26,25 +30,25 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash -l {0}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
 
-      - name: Install Poetry
-        uses: snok/install-poetry@v1
-
-      - name: Setup Python
-        uses: actions/setup-python@v4
+      - name: Setup Conda
+        uses: conda-incubator/setup-miniconda@v2
         with:
-          python-version: 3.9
-          cache: "poetry"
+          auto-update-conda: false
+          activate-environment: ${{ env.ENV_NAME }}
+          environment-file: conda-linux-64.lock
+
       - name: Install packages
         run: poetry install
 
       - name: Build docs
-        run: make docs_save
+        run: poetry run pdoc src --html -f -o docs
 
       - name: Move docs
         run: mv docs/src/* docs && rm -rf docs/src
