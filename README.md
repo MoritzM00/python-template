@@ -38,6 +38,14 @@ This [demo repository](https://github.com/MoritzM00/python-template-demo) shows 
    cookiecutter -c conda gh:MoritzM00/python-template
    ```
 
+   or
+
+   ```bash
+   cookiecutter -c conda gh:MoritzM00/python-template
+   ```
+
+   to get the conda template.
+
 ## Detailed Instructions for first-time setup
 
 ### Pre-Requisites
