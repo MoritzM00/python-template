@@ -50,11 +50,8 @@ jobs:
       - name: Build docs
         run: poetry run pdoc src --html -f -o docs
 
-      - name: Move docs
-        run: mv docs/src/* docs && rm -rf docs/src
-
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v2
         with:
           path: 'docs/'
       - name: Deploy to GitHub Pages
