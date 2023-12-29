@@ -29,7 +29,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.ruff]
 line-length = 88
-extend-exclude = ["template_demo/__init__.py"]
+extend-exclude = ["{{cookiecutter.package_name}}/__init__.py"]
 
 [tool.ruff.extend-per-file-ignores]
 # Also ignore `E402` in all `__init__.py` files.
