@@ -1,4 +1,4 @@
-# {{cookiecutter.short_description}}
+# {{cookiecutter.project_name}}
 
 ![Tests](https://img.shields.io/github/actions/workflow/status/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}/test_deploy.yaml?style={{cookiecutter.badge_style}}&label=Test%20and%20Deploy)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white&style={{cookiecutter.badge_style}})][pre-commit]

@@ -15,10 +15,10 @@ test:
 	poetry run pytest
 
 docs_view:
-	poetry run pdoc src --docformat numpy
+	poetry run pdoc {{cookiecutter.package_name}} --docformat numpy
 
 docs_save:
-	poetry run pdoc src -o docs --docformat numpy
+	poetry run pdoc {{cookiecutter.package_name}} -o docs --docformat numpy
 
 ## Delete all compiled Python files
 clean:
