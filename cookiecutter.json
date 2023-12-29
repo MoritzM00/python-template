@@ -3,6 +3,7 @@
   "github_username": "MoritzM00",
   "email": "moritz.mistol@gmail.com",
   "repo_name": "repo-name",
+  "module_name": "module_name",
   "version": "0.0.0",
   "short_description": "",
   "copyright_year": "{% now 'utc', '%Y' %}",
