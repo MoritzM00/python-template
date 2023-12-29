@@ -1,5 +1,5 @@
 """Test the `main` module."""
-from {{cookiecutter.module_name}} import say_hello
+from {{cookiecutter.package_name}}.main import say_hello
 
 
 def test_say_hello():
