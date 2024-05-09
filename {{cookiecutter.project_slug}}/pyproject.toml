@@ -16,7 +16,7 @@ dependencies = [
 ]
 
 [project.scripts]
-{{cookiecutter.package_name}} = "{{cookiecutter.package_name}}.__main__:main"
+{{cookiecutter.package_name}} = "{{cookiecutter.package_name}}.main:main"
 
 
 [project.optional-dependencies]
@@ -30,7 +30,7 @@ dev = [
 
 [tool.ruff]
 line-length = 88
-extend-exclude = ["{{cookiecutter.package_name}}/__init__.py"]
+extend-exclude = ["src/{{cookiecutter.package_name}}/__init__.py"]
 extend-include = ["*.ipynb"]
 target-version = "py310"
 

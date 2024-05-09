@@ -1,7 +1,7 @@
 """A script that demonstrates the documentation."""
 
 
-def say_hello():
+def main():
     """Return the string `Hello World!`.
 
     A simple function that returns the string `Hello World!`.
@@ -15,4 +15,4 @@ def say_hello():
 
 
 if __name__ == "__main__":
-    print(say_hello())
+    print(main())
