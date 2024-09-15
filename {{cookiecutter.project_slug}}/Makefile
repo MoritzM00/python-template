@@ -1,24 +1,21 @@
+setup: initialize_git install
+
 initialize_git:
 	git init
 
 install:
-	poetry config virtualenvs.in-project true
-	poetry install
-	poetry run pre-commit install
-
-activate:
-	poetry shell
-
-setup: initialize_git install
+	uv sync --all-extras --dev
+	uv run pre-commit install
+	uv pip install -e .
 
 test:
-	poetry run pytest
+	uv run pytest
 
 docs_view:
-	poetry run pdoc {{cookiecutter.package_name}} --docformat numpy
+	uv run pdoc {{cookiecutter.package_name}} --docformat numpy
 
 docs_save:
-	poetry run pdoc {{cookiecutter.package_name}} -o docs --docformat numpy
+	uv run pdoc {{cookiecutter.package_name}} -o docs --docformat numpy
 
 ## Delete all compiled Python files
 clean:

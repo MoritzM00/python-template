@@ -1,37 +1,27 @@
-[tool.poetry]
+[project]
 name = "{{cookiecutter.project_name}}"
 version = "{{cookiecutter.version}}"
 description = "{{cookiecutter.short_description}}"
-authors = ["{{cookiecutter.full_name}} <{{cookiecutter.email}}>"]
+authors = [ {name="{{cookiecutter.full_name}}", email="{{cookiecutter.email}}"}]
 readme = "README.md"
-documentation = "https://{{cookiecutter.github_username}}.github.io/{{cookiecutter.project_slug}}"
-repository = "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}"
-license = "MIT"
-keywords = ["Python", "Poetry"]
-packages = [
-    { include = "{{cookiecutter.package_name}}" },
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+dependencies = ["numpy>=3.10"]
+
+
+[tool.uv]
+dev-dependencies = [
+    "pdoc>=14.7.0",
+    "pre-commit>=3.8.0",
+    "pytest>=8.3.3",
+    "ruff>=0.6.5",
 ]
-
-[tool.poetry.dependencies]
-python = ">=3.9,<3.12"
-
-
-[tool.poetry.group.dev.dependencies]
-pytest = ">=7.2.2"
-pre-commit = ">=3.1.1"
-pdoc = ">=0.10.0"
-black = ">=23.1.0"
-ruff = ">=0.1.9"
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
 
 [tool.ruff]
 line-length = 88
-extend-exclude = ["{{cookiecutter.package_name}}/__init__.py"]
+extend-exclude = ["src/{{cookiecutter.package_name}}/__init__.py"]
 
-[tool.ruff.extend-per-file-ignores]
+[tool.ruff.lint.extend-per-file-ignores]
 # Also ignore `E402` in all `__init__.py` files.
 "__init__.py" = ["E402"]
 
@@ -54,8 +44,8 @@ select = [
 ]
 extend-ignore = ["D203", "D213"]
 
-[too.ruff.lint.pydocstyle]
-convetion = "numpy"
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"
 
 [tool.pytest.ini_options]
 addopts = "-ra"
