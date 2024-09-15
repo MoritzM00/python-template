@@ -60,7 +60,7 @@ After you generated your project with the template (see above), you need to do t
    source .venv/bin/activate
    ```
 
-   and then create a commit (must include the `poetry.lock` file):
+   and then create a commit (must include the `uv.lock` file):
 
    ```bash
    git add .
