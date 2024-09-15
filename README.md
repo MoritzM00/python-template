@@ -8,7 +8,7 @@ This [demo repository](https://github.com/MoritzM00/python-template-demo) shows 
 
 ## Features
 
-:white_check_mark: [Poetry](https://python-poetry.org/) for efficient dependency management
+:white_check_mark: [uv](https://docs.astral.sh/uv/) for efficient dependency management
 
 **Note:** Need Conda as base environment for data Science and ML Projects? Switch to the `conda` Branch!
 
@@ -20,28 +20,22 @@ This [demo repository](https://github.com/MoritzM00/python-template-demo) shows 
 
 ## Quick Start
 
-1. Install [cookiecutter](https://cookiecutter.readthedocs.io/en/stable/installation.html), e.g. with
+1. Install [uv](https://docs.astral.sh/uv/getting-started/installation/), e.g. with homebrew:
 
    ```bash
-   pip install cookiecutter
-   ```
-
-   or (preferably) with [Pipx](https://pypa.github.io/pipx/):
-
-   ```bash
-   pipx install cookiecutter
+   brew install uv
    ```
 
 2. Run the following command:
 
    ```bash
-   cookiecutter gh:MoritzM00/python-template
+   uvx cookiecutter gh:MoritzM00/python-template
    ```
 
    or
 
    ```bash
-   cookiecutter -c conda gh:MoritzM00/python-template
+   uvx cookiecutter -c conda gh:MoritzM00/python-template
    ```
 
    to get the conda template.
@@ -50,10 +44,10 @@ This [demo repository](https://github.com/MoritzM00/python-template-demo) shows 
 
 ### Pre-Requisites
 
-- Python >= 3.9
-- [Poetry](https://python-poetry.org/docs/#installation)
+- Python >= 3.10
+- [uv](https://docs.astral.sh/uv/getting-started/installation/)
 
-The code is tested for python versions 3.9 and 3.10 on Linux and macOS.
+The code is tested for python versions 3.10 and 3.11 on Linux and version 3.10 on macOS.
 
 ### Environment Setup and GitHub Linking
 
@@ -63,7 +57,7 @@ After you generated your project with the template (see above), you need to do t
 
    ```bash
    make setup
-   make activate
+   source .venv/bin/activate
    ```
 
    and then create a commit (must include the `poetry.lock` file):
