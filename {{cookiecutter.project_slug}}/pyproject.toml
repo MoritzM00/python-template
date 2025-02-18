@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "{{cookiecutter.project_name}}"
+name = "{{cookiecutter.package_name}}"
 version = "{{cookiecutter.version}}"
 description = "{{cookiecutter.short_description}}"
 authors = [
@@ -30,6 +30,7 @@ packages = ["src/{{cookiecutter.package_name}}"]
 [tool.ruff]
 line-length = 88
 extend-exclude = ["src/{{cookiecutter.package_name}}/__init__.py"]
+target-version = "py310"
 
 [tool.ruff.lint.extend-per-file-ignores]
 # Also ignore `E402` in all `__init__.py` files.
@@ -52,7 +53,10 @@ select = [
     # pandas related
     "PD",
 ]
-extend-ignore = ["D203", "D213"]
+extend-ignore = [
+    "D203",    # One blank line before class docstring
+    "D213",    # Multi-line docstring summary should start at the second line
+]
 
 [tool.ruff.lint.pydocstyle]
 convention = "numpy"
